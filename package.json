@@ -1,0 +1,37 @@
+{
+  "name": "next-app-use-query",
+  "version": "0.0.1",
+  "description": "Query controller for Next JS - App Directory",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alimortazavi-pr/next-app-use-query.git"
+  },
+  "keywords": [
+    "nextjs",
+    "next",
+    "app-directory",
+    "app",
+    "js",
+    "router",
+    "query",
+    "controller",
+    "fixer",
+    "use-query",
+    "use-query-next",
+    "use-query-nextjs",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Ali Mortazavi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alimortazavi-pr/next-app-use-query/issues"
+  },
+  "homepage": "https://github.com/alimortazavi-pr/next-app-use-query#readme"
+}
