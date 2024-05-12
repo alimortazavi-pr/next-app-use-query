@@ -56,6 +56,29 @@ export function useQuery() {
 
       return query;
     },
+    addMany: (...items: { [key: string]: string }[]): string => {
+      // update as necessary
+      const current = new URLSearchParams(Array.from(searchParams.entries()));
+
+      for (let item of items) {
+        for (let key in item) {
+          // Check if value is empty
+          if (!item[key]) {
+            current.delete(key);
+          } else {
+            current.set(key, item[key]);
+          }
+        }
+      }
+
+      // cast to string
+      const search = current.toString();
+
+      // check if search is empty and add ? if not
+      const query = search ? `?${search}` : "";
+
+      return query;
+    },
     delete: (key: string): string => {
       const current = new URLSearchParams(Array.from(searchParams.entries()));
       current.delete(key);
