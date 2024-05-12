@@ -29,7 +29,9 @@ const CheckQueryComponent = () => {
     //Set methods
     console.log(query.set({ search: "Ali Morazavi", category: "users" })); // returns '?search=Ali+Mortazavi&category=users'
     //Usage
-    router.replace("/users" + query.set({ search: "Ali Morazavi", category: "users" }));
+    router.replace(
+      "/users" + query.set({ search: "Ali Morazavi", category: "users" })
+    );
 
     //Add methods
     console.log(query.add("rate", "5")); // returns '?search=Ali+Mortazavi&category=users&rate=5'
@@ -37,8 +39,12 @@ const CheckQueryComponent = () => {
     router.replace("/users" + query.add("rate", "5"));
 
     //Delete methods
+    //Delete One
     console.log(query.delete("search")); // returns '?category=1&rate=5' or ''
     router.replace("/users" + query.delete("search"));
+    // Delete Many
+    console.log(query.deleteMany("search", "category")); // returns '?rate=5' or ''
+    router.replace("/users" + query.deleteMany("search", "category"));
   }
 
   return (

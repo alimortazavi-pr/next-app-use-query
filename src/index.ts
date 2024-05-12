@@ -68,6 +68,21 @@ export function useQuery() {
 
       return query;
     },
+    deleteMany: (...keys: string[]): string => {
+      const current = new URLSearchParams(Array.from(searchParams.entries()));
+
+      for (let key of keys) {
+        current.delete(key);
+      }
+
+      // cast to string
+      const search = current.toString();
+
+      // check if search is empty and add ? if not
+      const query = search ? `?${search}` : "";
+
+      return query;
+    },
   };
 }
 
