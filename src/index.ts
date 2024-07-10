@@ -29,6 +29,9 @@ export function useQuery() {
       let qsEntries = Object.entries(queries);
       let qs = "?";
       for (let i = 0; i < qsEntries.length; i++) {
+        if (qsEntries[i][1] === "") {
+          continue;
+        }
         qs += `${qsEntries[i][0]}=${qsEntries[i][1]}`;
         if (i !== qsEntries.length - 1) {
           qs += "&";
