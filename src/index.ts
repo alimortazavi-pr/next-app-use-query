@@ -33,8 +33,8 @@ export function useQuery() {
           continue;
         }
         qs += `${qsEntries[i][0]}=${qsEntries[i][1]}`;
-        if (i !== qsEntries.length - 1) {
-          qs += "&";
+        if (i !== 0) {
+          qs = "&" + qs;
         }
       }
 
