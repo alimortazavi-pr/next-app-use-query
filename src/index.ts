@@ -32,9 +32,10 @@ export function useQuery() {
         if (qsEntries[i][1] === "") {
           continue;
         }
-        qs += `${qsEntries[i][0]}=${qsEntries[i][1]}`;
         if (i !== 0) {
-          qs = "&" + qs;
+          qs += `&${qsEntries[i][0]}=${qsEntries[i][1]}`;
+        } else {
+          qs += `${qsEntries[i][0]}=${qsEntries[i][1]}`;
         }
       }
 
