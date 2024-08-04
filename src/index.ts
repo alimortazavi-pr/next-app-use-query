@@ -29,13 +29,12 @@ export function useQuery() {
       let qsEntries = Object.entries(queries);
       let qs = "?";
       for (let i = 0; i < qsEntries.length; i++) {
-        if (qsEntries[i][1] === "") {
-          continue;
-        }
-        if (i !== 0) {
-          qs += `&${qsEntries[i][0]}=${qsEntries[i][1]}`;
-        } else {
-          qs += `${qsEntries[i][0]}=${qsEntries[i][1]}`;
+        if (qsEntries[i][1] !== "") {
+          if (i !== 0) {
+            qs += `&${qsEntries[i][0]}=${qsEntries[i][1]}`;
+          } else {
+            qs += `${qsEntries[i][0]}=${qsEntries[i][1]}`;
+          }
         }
       }
 
