@@ -30,7 +30,7 @@ export function useQuery() {
       let qs = "?";
       for (let i = 0; i < qsEntries.length; i++) {
         if (qsEntries[i][1] !== "") {
-          if (i !== 0) {
+          if (i !== 0 && qs !== "?") {
             qs += `&${qsEntries[i][0]}=${qsEntries[i][1]}`;
           } else {
             qs += `${qsEntries[i][0]}=${qsEntries[i][1]}`;
