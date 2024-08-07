@@ -112,5 +112,6 @@ export function useQuery(): UseQueryType {
     },
   };
 }
+export * from "./types";
 
 export default useQuery;
