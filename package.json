@@ -1,6 +1,6 @@
 {
   "name": "next-app-use-query",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Query controller for Next JS - App Directory",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,6 +1,7 @@
 import { useSearchParams } from "next/navigation";
+import { UseQueryType } from "./types";
 
-export function useQuery() {
+export function useQuery(): UseQueryType {
   const searchParams = useSearchParams();
 
   return {
